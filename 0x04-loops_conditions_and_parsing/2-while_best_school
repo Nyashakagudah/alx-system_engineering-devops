@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script prints out a phrase 10 times using a loop
+
+i=10
+while [ "$i" -gt 0 ]  
+do
+    echo "Best School"
+    i=$((i - 1))
+done
+i=$i
+
