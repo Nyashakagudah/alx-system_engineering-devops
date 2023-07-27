@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Loop through all files in current directory
+for i in *
+do
+  # Extract and print the file name after the first '-' character
+  # This removes any prefix before the '-' from the printed name
+  echo "$i" | cut -d'-' -f2
+done
+

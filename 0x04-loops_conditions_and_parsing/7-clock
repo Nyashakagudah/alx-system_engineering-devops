@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# This script displays the hours 0-11 
+# and prints the minutes 0-59 for each hour
+
+i=1
+j=0
+
+# Outer loop to iterate through the hours
+while [ "$j" -le 12 ]  
+do
+
+  # Print the current hour
+  echo "Hour: $j"
+
+  # Inner loop to iterate through the minutes
+  i=1
+  while [ "$i" -le 59 ]
+  do
+    # Print the current minute
+    echo "$i"
+    # Increment counter
+    i=$((i + 1))
+  done
+
+  # Increment hour counter
+  j=$((j + 1))
+done
+
+# Store final value of i
+i=$i
+
