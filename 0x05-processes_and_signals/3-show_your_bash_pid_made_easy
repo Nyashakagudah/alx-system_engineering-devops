@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script prints out process information for bash processes 
+# It uses pgrep rather than ps to avoid the need for sudo permissions
+
+pgrep -l bash
+

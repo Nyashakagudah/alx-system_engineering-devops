@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script prints a statement continuously 
+
+# The script uses an infinite loop to print text repeatedly
+
+# User must press Ctrl+C to stop the endless looping
+
+while true  
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
