@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+#Bash Script
+# shellcheck disable=SC2009
+ps aux | grep '[b]ash'
+

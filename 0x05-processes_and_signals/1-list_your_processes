@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script displays a list of all currently running processes
+# It shows processes for all users, including background processes
+# The output is formatted in a easy to read way 
+# The full process tree is displayed, with parent and child processes
+
+ps -auxf
