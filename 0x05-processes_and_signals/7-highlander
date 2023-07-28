@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# This script displays a message repeatedly with a delay between each print
+# It also handles SIGTERM signals by ignoring them and printing a message instead
+
+# Set up function to print message on SIGTERM 
+print_invincible_msg() {
+ echo "I am invincible!!!" 
+}
+
+# Trap SIGTERM and call print_invincible_msg function
+trap print_invincible_msg SIGTERM 
+
+# Loop indefinitely 
+while true; do
+
+ # Print message   
+ echo "To infinity and beyond"
+
+ # Sleep for 2 seconds
+ sleep 2
+
+done
