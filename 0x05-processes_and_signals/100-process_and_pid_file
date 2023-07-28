@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Define a function to remove PID file and exit 
+function clean_up_and_exit() {
+  rm -f /var/run/myscript.pid
+  exit
+}
+
+# Trap CTRL+C signal (SIGINT) - print message but keep running
+trap "echo 'CTRL+C pressed, but script is still running!'" SIGINT
+
+# Trap TERM signal (SIGTERM) - print message, clean up and exit 
+trap "echo 'Terminating script...'; clean_up_and_exit" SIGTERM  
+
+# Trap QUIT signal (SIGQUIT) - print message, clean up and exit
+trap "echo 'Quitting script...'; clean_up_and_exit" SIGQUIT
+
+# Write process ID to PID file
+echo $$ > /var/run/myscript.pid  
+
+# Infinite loop 
+while true; do
+  echo "Running forever..."
+  sleep 2
+done
