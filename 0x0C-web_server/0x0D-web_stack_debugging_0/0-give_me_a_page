@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-#Script to run bash script to give me a page
-
-echo "ServerName localhost" >> /etc/apache2/apache2.conf
-service apache2 start
+# Install nginx on remote server
+sudo service apache restart
