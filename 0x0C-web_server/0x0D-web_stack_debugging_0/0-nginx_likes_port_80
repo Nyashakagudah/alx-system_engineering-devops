@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script to fix a bug that is causing nginx to not use port 80
+
+
+# Enable default site
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart Nginx
+sudo service nginx restart
